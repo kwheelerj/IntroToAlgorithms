@@ -23,6 +23,8 @@ class DoublyLinkedList:
 		return self.nil.next is self.nil
 
 	def delete(self, node):
+		if node is self.nil:
+			return
 		node.prev.next = node.next
 		node.next.prev = node.prev
 
@@ -34,14 +36,12 @@ class DoublyLinkedList:
 		return node
 
 	def disp(self):
-		print('*' * 50)
 		print('[', end='')
 		node = self.nil.next
 		while node is not self.nil:
 			print(node.key, end=', ')
 			node = node.next
 		print(']')
-		print('*' * 50)
 
 
 class Node:
@@ -61,5 +61,8 @@ if __name__ == '__main__':
 	d_list.insert(3)
 	d_list.disp()
 
+	del_node = d_list.search(3)
+	d_list.delete(del_node)
+	d_list.disp()
+
 	print(d_list.search(3).key)
-	print(d_list.search(4).key)
