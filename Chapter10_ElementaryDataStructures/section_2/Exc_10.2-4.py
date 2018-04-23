@@ -29,7 +29,7 @@ class DoublyLinkedList:
 	def search(self, value):
 		node = self.nil.next
 		# while node is not self.nil and node.key is not value:
-		while node is not None and node.key is not value:
+		while node.key is not None and node.key is not value:
 			node = node.next
 		return node
 
