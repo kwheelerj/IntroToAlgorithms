@@ -5,7 +5,7 @@ __author__ = 'kwheelerj'
 # x != L.nil in each iteration.
 
 
-class DoublyLinkedList:
+class DoublyLinkedCircularList:
 
 	def __init__(self):
 		self.nil = Node(None)		# sentinel
@@ -53,7 +53,7 @@ class Node:
 
 
 if __name__ == '__main__':
-	d_list = DoublyLinkedList()
+	d_list = DoublyLinkedCircularList()
 	d_list.insert(1)
 	d_list.insert(2)
 	d_list.disp()

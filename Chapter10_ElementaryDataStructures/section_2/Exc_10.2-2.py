@@ -19,8 +19,8 @@ class Stack:
 
 class Node:
 
-	def __init__(self, data):
-		self.data = data
+	def __init__(self, value):
+		self.key = value
 		self.next = None
 
 
@@ -46,7 +46,7 @@ class SinglyLinkedList:
 		x = self.head
 		print("[", end='')
 		while x is not None:
-			print("{}, ".format(x.data), end='')
+			print("{}, ".format(x.key), end='')
 			x = x.next
 		print("]")
 

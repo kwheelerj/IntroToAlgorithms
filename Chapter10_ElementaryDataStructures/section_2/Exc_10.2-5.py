@@ -4,10 +4,10 @@ __author__ = 'kwheelerj'
 # circular lists.  What are the running times of your procedures?
 
 
-class SinglyLinkedList:
+class SinglyLinkedCircularList:
 
 	def __init__(self):
-		self.nil = Node(None)
+		self.nil = Node(None)		# sentinel
 		self.nil.next = self.nil
 		self.tail = self.nil
 
@@ -56,7 +56,7 @@ class Node:
 
 
 if __name__ == '__main__':
-	s_list = SinglyLinkedList()
+	s_list = SinglyLinkedCircularList()
 	s_list.insert(1)
 	s_list.insert(2)
 	s_list.disp()
@@ -69,4 +69,3 @@ if __name__ == '__main__':
 	s_list.disp()
 
 	print(s_list.search(3).key)
-
