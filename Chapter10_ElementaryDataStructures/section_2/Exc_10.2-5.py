@@ -12,6 +12,7 @@ class SinglyLinkedList:
 		self.tail = self.nil
 
 	def insert(self, value):
+		# O(1) running time
 		node = Node(value)
 		node.next = self.nil.next
 		self.nil.next = node
@@ -19,6 +20,7 @@ class SinglyLinkedList:
 			self.tail = node
 
 	def delete(self, node):
+		# O(n) running time
 		if node is self.nil:
 			return
 		current_node = self.nil
@@ -28,6 +30,7 @@ class SinglyLinkedList:
 		node.next = None
 
 	def search(self, value):
+		# O(n) running time
 		current_node = self.nil.next
 		while current_node is not self.nil and current_node.key is not value:
 			current_node = current_node.next
